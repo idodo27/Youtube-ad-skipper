@@ -55,7 +55,7 @@ public class Program {
 	private static String filename = "";
 
 	// Set the full path to the directory you would like to save the report to.
-	private static String path = "/home/ch1co/Documents/";
+	private static String path = "Your_path_for_storing_excel_report";
 
 	// Change the url to the youtube video you would like to have a report about.
 	private static String url = "https://www.youtube.com/watch?v=qgL7NrduGJc";
@@ -254,7 +254,6 @@ public class Program {
 			cal = new GregorianCalendar();
 			dateFormat.setTimeZone(cal.getTimeZone());
 			filename = "youtube-" + dateFormat.format(cal.getTime()) + ".xlsx";
-			path = "/home/ch1co/Documents/";
 			FileOutputStream fos = new FileOutputStream(path + filename);
 
 			XSSFWorkbook workbook = new XSSFWorkbook();
@@ -342,7 +341,7 @@ public class Program {
 	public static void createDriver() {
 		// Change the path to your geko or chrome driver executable and set the
 		// properties accordingly.
-		System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
+		System.setProperty("webdriver.gecko.driver (or your different driver other than gecko)", "Your_path_to_the_web_driver");
 		fDriver = new FirefoxDriver();
 		fDriver.manage().window().setPosition(new Point(0, 0));
 		fDriver.manage().window().setSize(new Dimension(750, 800));
